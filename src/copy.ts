@@ -10,7 +10,7 @@ export const actionLine =
   'Not on sale yet. This page is the whole shop for now.'
 
 export const copy = {
-  brand: 'Hoodie',
+  brand: 'Devs Shop',
   tag: 'PRE-LAUNCH',
   hero: {
     title: 'Nothing but hoodies.',

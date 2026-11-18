@@ -1,6 +1,6 @@
 # eigibot-testing-homepage
 
-Pre-launch landing page for the hoodie label. One page, no commerce, no waitlist.
+Pre-launch landing page for **Devs Shop**, a single-garment hoodie store. One page, no commerce, no waitlist.
 
 **Status: pre-launch.** Nothing on this page is for sale.
 
@@ -55,14 +55,14 @@ Exactly one breakpoint, at `768px`.
 
 ## Illustrations — PLACEHOLDERS
 
-> **Every illustration in `src/illustrations/` is an obvious placeholder.**
+> **Every illustration in `src/illustrations.tsx` is an obvious placeholder.**
 > They are hand-authored monoline SVGs drawn to the art direction (2.5px master
 > stroke, no faces, no hands, no shading, paper fill plus one accent shape).
 > They exist to hold the composition and must be replaced with final artwork
 > before launch.
 
-- `SlotA.tsx` — hero illustration, `1600 x 1200` (4:3), crops to 1:1 on mobile
-- `SlotB.tsx` — full-bleed illustration band, `2000 x 700`
+- `GarmentIllustration` — hero illustration, `1600 x 1200` (4:3), crops to 1:1 on mobile
+- `PatternBandIllustration` — full-bleed illustration band, `2000 x 700`
 
 Both files carry a prominent `PLACEHOLDER` comment at the top. The rendered page
 shows no placeholder marker, by design; the labelling lives in the code and here.
@@ -77,7 +77,7 @@ The following are **not** confirmed and are deliberately absent from the copy:
 - Contact email address
 
 The footer contact slot is rendered as an obvious placeholder token rather than a
-real address. When the real values arrive, edit **`src/content.ts`** — a single
+real address. When the real values arrive, edit **`src/copy.ts`** — a single
 file holds every placeholder string, so copy can be swapped without touching
 layout.
 
@@ -86,4 +86,4 @@ layout.
 - No `<form>`, no email input, no `<button>` anywhere in the DOM, by design.
 - The hero reserves a fixed 52px-tall row for a future primary action. It is
   currently occupied by the status line. A future button replaces that line at
-  exactly 52px so the layout does not shift. This is marked in `Hero.tsx`.
+  exactly 52px so the layout does not shift. This is marked in `App.tsx`.

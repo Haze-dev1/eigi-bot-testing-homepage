@@ -77,4 +77,15 @@ describe('homepage', () => {
     expect(text).not.toMatch(/\b\d{4}\b/) // no dates
     expect(text).not.toMatch(/\d+\s?(gsm|oz)\b/i) // no fabric weights
   })
+  it('renders the store name Devs Shop in the top bar and the footer', () => {
+    const { container } = render(<App />)
+    const wordmark = container.querySelector('.wordmark')
+    const footerName = container.querySelector('.footer-name')
+    expect(wordmark).not.toBeNull()
+    expect(footerName).not.toBeNull()
+    // Brand wordmark renders the store name plus the accent mark.
+    expect(wordmark!.textContent).toBe('Devs Shop.')
+    expect(footerName!.textContent).toBe('Devs Shop.')
+    expect(copy.brand).toBe('Devs Shop')
+  })
 })
